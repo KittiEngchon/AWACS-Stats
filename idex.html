@@ -1,116 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AWACS Stats - Advanced Watch And Crypto Scanning</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #0a0f1a;
-      color: #00ffcc;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(circle at center, #101820, #000814);
+      color: #39ff14;
     }
     header {
-      background-color: #121a2f;
-      padding: 20px;
+      background-color: #071013;
+      padding: 25px;
       text-align: center;
-      border-bottom: 1px solid #00ffcc;
+      border-bottom: 2px solid #39ff14;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #39ff14;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 1rem;
+      color: #99ffcc;
     }
     nav {
       display: flex;
       justify-content: center;
-      gap: 30px;
-      padding: 15px;
-      background-color: #101828;
-      border-bottom: 1px solid #00ffcc;
+      background-color: #0a0f11;
+      padding: 10px 0;
+      border-bottom: 1px solid #39ff14;
     }
     nav a {
-      color: #00ffcc;
+      color: #39ff14;
       text-decoration: none;
+      margin: 0 20px;
       font-weight: bold;
     }
     nav a:hover {
       text-decoration: underline;
     }
-    .dashboard {
-      padding: 30px;
+    main {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
     }
-    .radar-panel, .launchpad-list, .project-stats {
-      background-color: #1a2338;
-      border: 1px solid #00ffcc;
+    .module {
+      background-color: #0e1c24;
+      border: 2px solid #39ff14;
       border-radius: 12px;
       padding: 20px;
-      margin-bottom: 20px;
+      box-shadow: 0 0 10px #39ff14;
     }
-    .section-title {
-      font-size: 1.2em;
-      margin-bottom: 10px;
+    .module h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      border-bottom: 1px dashed #39ff14;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
     }
-    .launch-item {
-      background-color: #111c2f;
+    .item {
+      background-color: #061017;
+      margin: 10px 0;
       padding: 10px;
-      margin: 5px 0;
-      border-left: 4px solid #00ffcc;
+      border-left: 4px solid #39ff14;
     }
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 0.8em;
-      border-top: 1px solid #00ffcc;
-      background-color: #121a2f;
-      margin-top: 30px;
+      font-size: 0.85rem;
+      background-color: #071013;
+      color: #666;
+      border-top: 1px solid #39ff14;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>AWACS Stats</h1>
-    <p>Advanced Watch And Crypto Scanning</p>
+    <p>Advanced Watch And Crypto Scanning System</p>
   </header>
   <nav>
-    <a href="#radar">Radar</a>
-    <a href="#launchpads">Launchpads</a>
-    <a href="#auto">Auto-Snipe</a>
-    <a href="#alerts">Alerts</a>
-    <a href="#settings">Settings</a>
+    <a href="#radar">Live Radar</a>
+    <a href="#launches">Launches</a>
+    <a href="#sniper">Auto Sniper</a>
+    <a href="#intel">Intel Feed</a>
+    <a href="#settings">Config</a>
   </nav>
-  <div class="dashboard">
-    <section class="radar-panel" id="radar">
-      <div class="section-title">Live Radar Scanner</div>
-      <p>Scanning for new presales and stealth launches across multiple chains...</p>
+  <main>
+    <section class="module" id="radar">
+      <h2>🛰 Live Radar</h2>
+      <p>Real-time detection of presale pools, stealth deployments, and new token activity.</p>
     </section>
 
-    <section class="launchpad-list" id="launchpads">
-      <div class="section-title">New Launchpad Projects</div>
-      <div class="launch-item">🔥 <strong>SpaceGems</strong> on PinkSale - Starts in 2h</div>
-      <div class="launch-item">🚀 <strong>NeutronToken</strong> on Gempad - Fair Launch Live</div>
-      <div class="launch-item">👁 <strong>StealthX</strong> - Just deployed on BaseChain</div>
+    <section class="module" id="launches">
+      <h2>🚀 Active Launchpads</h2>
+      <div class="item">PinkSale: <strong>AI Hunter</strong> - Presale starts in 1h 45m</div>
+      <div class="item">Gempad: <strong>ZombieVerse</strong> - Fair Launch in progress</div>
+      <div class="item">BaseChain: <strong>StealthWolf</strong> - Just deployed stealth mode</div>
     </section>
 
-    <section class="project-stats" id="auto">
-      <div class="section-title">Auto-Snipe Module</div>
-      <p>Set your sniper preferences and deploy capital when launch conditions are met.</p>
+    <section class="module" id="sniper">
+      <h2>🎯 Auto-Sniper Settings</h2>
+      <p>Define capital limits, delay tolerances, and execution chains for rapid engagement.</p>
     </section>
 
-    <section class="project-stats" id="alerts">
-      <div class="section-title">Smart Alerts</div>
-      <p>Receive alerts based on keyword triggers, wallet activity, or trending scores.</p>
+    <section class="module" id="intel">
+      <h2>📡 Intelligence Feed</h2>
+      <p>Aggregated data from social channels, contract scanners, and wallet trackers.</p>
     </section>
 
-    <section class="project-stats" id="settings">
-      <div class="section-title">System Settings</div>
-      <p>Connect wallet, adjust notification preferences, and manage tracking filters.</p>
+    <section class="module" id="settings">
+      <h2>⚙️ Config Panel</h2>
+      <p>Manage wallet connections, alert thresholds, and keyword triggers.</p>
     </section>
-  </div>
-
+  </main>
   <footer>
-    &copy; 2025 AWACS Stats. Scanning the crypto skies 24/7.
+    &copy; 2025 AWACS Stats | Crypto Situational Awareness at Its Finest
   </footer>
 </body>
 </html>
